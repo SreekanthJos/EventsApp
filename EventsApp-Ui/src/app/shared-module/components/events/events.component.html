@@ -1,0 +1,24 @@
+<div class="row events">
+ <div class="col-md-4" *ngFor="let event of data">
+        <div class="card card-chart">
+            <div class="card-header card-header-warning">
+                <div class="ct-chart" id="dailySalesChart">
+                    <img src="../../../../assets/img/no-image.png" alt="...">
+                </div>
+            </div>
+            <div class="card-body">
+                <h4 class="card-title">{{ event.description }}</h4>
+                <p class="card-category">
+                    {{ event.category }}  </p>
+            </div>
+            <div class="card-footer">
+                <div class="stats">
+                    <mat-icon>date_range</mat-icon><span>{{ event.date }}</span>
+                </div>
+                <div class="stats pull-right">
+                    <mat-icon>my_location</mat-icon> <span> {{ event.location }} </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -9,7 +9,21 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { LoginComponent } from './components/login/login.component';
 import { SharedRoutingModule } from './shared-routing.module';
+import { EventsComponent } from './components/events/events.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+//Material
+import {
+  MatIconModule, MatButtonModule, MatChipsModule, MatMenuModule
+} from '@angular/material';
+import { EventDetailsComponent } from './components/events/event-details/event-details.component';
+
+const _MaterialComponents = [
+  MatIconModule,
+  MatButtonModule,
+  MatChipsModule,
+  MatMenuModule
+];
 
 @NgModule({
   declarations: [
@@ -17,15 +31,29 @@ import { SharedRoutingModule } from './shared-routing.module';
     HomeComponent,
     FooterComponent,
     AdRotatorComponent,
-    LoginComponent
-   
+    LoginComponent,
+    EventsComponent,
+    EventDetailsComponent
   ],
   imports: [
-    CommonModule, FormsModule,SharedRoutingModule,NgbModule
+    CommonModule,
+    FormsModule,
+    SharedRoutingModule,
+    NgbModule,
+    _MaterialComponents
   ],
-  exports:[HeaderComponent,FooterComponent,HomeComponent,AdRotatorComponent,LoginComponent]
+  exports:[
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent,
+    AdRotatorComponent,
+    LoginComponent,
+    EventsComponent,
+    EventDetailsComponent,
+    _MaterialComponents
+  ]
 })
-export class SharedModule{ 
+export class SharedModule{
   constructor(){
     console.log('shared module loads..')
   }
