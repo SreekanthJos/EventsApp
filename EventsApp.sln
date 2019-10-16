@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventsApp.Orders.API", "Eve
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventInfo.Business", "EventInfo.Business\EventInfo.Business.csproj", "{CAFE9F97-2F4F-47B2-B171-9BA389B545E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventInfo.Data", "EventInfo.Data\EventInfo.Data.csproj", "{8EE0A08C-D5F5-4DAA-80C0-06DAA5FE7442}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventInfo.Data", "EventInfo.Data\EventInfo.Data.csproj", "{8EE0A08C-D5F5-4DAA-80C0-06DAA5FE7442}"
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "EventsDB", "EventsDB\EventsDB.sqlproj", "{DA1EC42C-D508-42D5-93A0-6C581F3BC25D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderInfo.Business", "OrderInfo.Business\OrderInfo.Business.csproj", "{62F4BEC9-5D86-47D2-B1C4-E2B850AFD7EB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{DA1EC42C-D508-42D5-93A0-6C581F3BC25D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA1EC42C-D508-42D5-93A0-6C581F3BC25D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DA1EC42C-D508-42D5-93A0-6C581F3BC25D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{62F4BEC9-5D86-47D2-B1C4-E2B850AFD7EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62F4BEC9-5D86-47D2-B1C4-E2B850AFD7EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62F4BEC9-5D86-47D2-B1C4-E2B850AFD7EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62F4BEC9-5D86-47D2-B1C4-E2B850AFD7EB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
