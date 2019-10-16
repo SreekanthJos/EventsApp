@@ -5,3 +5,5 @@
 */**/obj/Debug
 */**/obj/Release
 /EventInfo.Business/obj
+/.vs
+/.vscode
