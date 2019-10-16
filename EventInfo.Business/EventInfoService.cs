@@ -5,6 +5,8 @@ using System.Text;
 using EventInfo.Data;
 using EventInfo.Data.Entities;
 using  EventInfo.Business.Dtos;
+using Microsoft.EntityFrameworkCore;
+
 namespace EventInfo.Business.Services
 {
     public class EventInfoService : IEventInfoService
@@ -39,8 +41,12 @@ namespace EventInfo.Business.Services
 
         public IEnumerable<EventDto> GetAllEvents()
         {
-            var events = _dbContext.Event;
-            return _mapper.Map<IEnumerable<Event>, IEnumerable<EventDto>>(events);
+            var events = _dbContext.Event.Include(p=>p.Ticket).ToList();
+          
+            var eventsDto= _mapper.Map<IEnumerable<Event>, IEnumerable<EventDto>>(events);
+
+            
+            return eventsDto;
         }
 
         public void DeleteEvent(int eventId)

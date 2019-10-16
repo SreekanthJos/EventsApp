@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 using AutoMapper;
-using EventInfo.Business;
-using EventInfo.Business.Dtos;
 using EventInfo.Data.Entities;
+using OrderInfo.Business.Dtos;
 
-namespace EventInfo.Business
+namespace OrderInfo.Business
 {
-    public class AutoMapping:IAutoMapper
+    public class AutoMapping : IAutoMapper
     {
         private static IMapper _mapper;
         private static MapperConfiguration _config;
@@ -28,24 +27,23 @@ namespace EventInfo.Business
         public AutoMapping() => AutoMapperRegistration();
         private void AutoMapperRegistration()
         {
-            if(_config!=null) return;
+            if (_config != null)
+                return;
 
-            _config=new MapperConfiguration(cfg =>
+            _config = new MapperConfiguration(cfg =>
             {
-                cfg.CreateMap<Event, EventDto>();
-               // cfg.CreateMap<EventType, EventType>();
-                cfg.CreateMap<Country, CountryDto>();
-                cfg.CreateMap<City, CityDto>();
-                cfg.CreateMap<Ticket, TicketDto>();
-
+                cfg.CreateMap<OrderDto, OrderDto>();
+                cfg.CreateMap<User, UserDto>();
+                cfg.CreateMap<TicketOrder, TicketOrderDto>();
+               
             });
             _mapper = _config.CreateMapper();
         }
 
         public T2 Map<T1, T2>(T1 input)
         {
-          AutoMapperRegistration();
-          return Mapper.Map<T1, T2>(input);
+            AutoMapperRegistration();
+            return Mapper.Map<T1, T2>(input);
         }
 
         public IEnumerable<T2> Map<T1, T2>(IEnumerable<T1> input)

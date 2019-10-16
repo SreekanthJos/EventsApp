@@ -17,5 +17,6 @@ namespace EventInfo.Business.Services
         List<EventDto> GetAllEventsByCountry(int countryId);
         List<EventDto> GetAllEventsByType(int eventTypeId);
         IEnumerable<EventDto> GetAllEvents();
+
     }
 }
